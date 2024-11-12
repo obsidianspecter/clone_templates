@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Google Clone</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <div id="root"></div>
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div className="flex flex-col items-center justify-center min-h-screen">
+                    <header className="w-full p-4 flex justify-end space-x-4 text-sm text-gray-700">
+                        <a href="#" className="hover:underline">Gmail</a>
+                        <a href="#" className="hover:underline">Images</a>
+                        <i className="fas fa-th grid grid-cols-3 gap-1"></i>
+                        <img src="https://placehold.co/32x32" alt="User profile picture" className="rounded-full"/>
+                    </header>
+                    <main className="flex flex-col items-center mt-20">
+                        <img src="https://placehold.co/272x92" alt="Google logo" className="mb-8"/>
+                        <div className="w-full max-w-md">
+                            <div className="flex items-center border border-gray-300 rounded-full px-4 py-2">
+                                <i className="fas fa-search text-gray-500"></i>
+                                <input type="text" className="flex-grow px-4 py-2 focus:outline-none" placeholder="Search Google or type a URL"/>
+                                <i className="fas fa-microphone text-gray-500"></i>
+                            </div>
+                        </div>
+                        <div className="flex space-x-4 mt-8">
+                            <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded">Google Search</button>
+                            <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded">I'm Feeling Lucky</button>
+                        </div>
+                    </main>
+                    <footer className="w-full bg-gray-100 text-gray-700 mt-20 py-4">
+                        <div className="max-w-screen-lg mx-auto flex justify-between text-sm">
+                            <div className="flex space-x-4">
+                                <a href="#" className="hover:underline">Advertising</a>
+                                <a href="#" className="hover:underline">Business</a>
+                                <a href="#" className="hover:underline">How Search works</a>
+                            </div>
+                            <div className="flex space-x-4">
+                                <a href="#" className="hover:underline">Privacy</a>
+                                <a href="#" className="hover:underline">Terms</a>
+                                <a href="#" className="hover:underline">Settings</a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

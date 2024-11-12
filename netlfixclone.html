@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Netflix Clone</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div id="root"></div>
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div>
+                    <header className="bg-red-600 p-4 flex justify-between items-center">
+                        <div className="text-2xl font-bold">Netflix</div>
+                        <nav>
+                            <ul className="flex space-x-4">
+                                <li><a href="#" className="hover:text-gray-300">Home</a></li>
+                                <li><a href="#" className="hover:text-gray-300">TV Shows</a></li>
+                                <li><a href="#" className="hover:text-gray-300">Movies</a></li>
+                                <li><a href="#" className="hover:text-gray-300">New & Popular</a></li>
+                                <li><a href="#" className="hover:text-gray-300">My List</a></li>
+                            </ul>
+                        </nav>
+                        <div className="flex items-center space-x-4">
+                            <i className="fas fa-search"></i>
+                            <i className="fas fa-bell"></i>
+                            <img src="https://placehold.co/32x32" alt="User profile picture" className="rounded-full"/>
+                        </div>
+                    </header>
+                    <main className="p-4">
+                        <section className="mb-8">
+                            <h2 className="text-3xl font-bold mb-4">Trending Now</h2>
+                            <div className="grid grid-cols-5 gap-4">
+                                <img src="https://placehold.co/200x300" alt="Trending movie poster 1" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Trending movie poster 2" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Trending movie poster 3" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Trending movie poster 4" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Trending movie poster 5" className="rounded"/>
+                            </div>
+                        </section>
+                        <section className="mb-8">
+                            <h2 className="text-3xl font-bold mb-4">Top Picks for You</h2>
+                            <div className="grid grid-cols-5 gap-4">
+                                <img src="https://placehold.co/200x300" alt="Top pick movie poster 1" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Top pick movie poster 2" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Top pick movie poster 3" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Top pick movie poster 4" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Top pick movie poster 5" className="rounded"/>
+                            </div>
+                        </section>
+                        <section className="mb-8">
+                            <h2 className="text-3xl font-bold mb-4">Recently Added</h2>
+                            <div className="grid grid-cols-5 gap-4">
+                                <img src="https://placehold.co/200x300" alt="Recently added movie poster 1" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Recently added movie poster 2" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Recently added movie poster 3" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Recently added movie poster 4" className="rounded"/>
+                                <img src="https://placehold.co/200x300" alt="Recently added movie poster 5" className="rounded"/>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
